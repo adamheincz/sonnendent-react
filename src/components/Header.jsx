@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className="w-full flex items-center justify-between p-4 mt-5">
+        <header className="w-full flex items-center justify-between py-4 mt-5">
             <img className="size-[28px] mx-3" src="src/assets/sonnendent_logo.png" alt="Sonnendent logo"/>
             <nav className="font-semibold text-2xl text-sd-blue">
                 <ul className="flex gap-8">
