@@ -22,7 +22,7 @@ export default function OpeningHours() {
     }
 
     return (
-        <div className="bg-white p-9 font-medium text-2xl rounded-3xl  shrink-0">
+        <div className="bg-white p-9 font-medium text-2xl rounded-3xl shrink-0 h-fit">
             <h2 className="mb-9">Nyitvatartás</h2>
             <ol className="flex bg-sd-light-blue p-1.5 rounded-full mb-6">
                 {OPENING_HOURS.map((item, index) =>
@@ -33,7 +33,11 @@ export default function OpeningHours() {
                     >
                         <span className="relative z-10">{item.location}</span>
                         {item === selectedLocation &&
-                            <motion.div layoutId="selected-item" className="w-full h-full rounded-4xl absolute bg-white inset-0"></motion.div>
+                            <motion.div 
+                            transition={{ duration: 0.25, ease: "easeInOut"}}
+                            layoutId="selected-item" 
+                            style={{borderRadius: 36}} 
+                            className="w-full h-full absolute bg-white inset-0"></motion.div>
                         }
                     </li>
 
